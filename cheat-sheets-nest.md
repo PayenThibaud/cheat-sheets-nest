@@ -69,7 +69,23 @@ le string :
 `nomDeFonction(): string {...}`
 *la fonction est obligé de renvoyer une chaîne de caractère*  
 `nomDeFonction(): string[] {...}`
-*La fonction est obligé de renvoyer une table*
+*La fonction est obligé de renvoyer une table*  
   
-Installer une dépendance/package
+Installer une dépendance/package  
 `pnpm install prisma --save-dev`  
+  
+Vérifier le env.  
+`DB_URL="postgresql://thibaud:Payen@localhost:5432/projetNest"`  
+  
+Vérifier le schema.prisma, il doit contenir les tables et les liens logique
+```bash
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+# puis les table
+```
