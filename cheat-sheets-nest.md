@@ -71,3 +71,5 @@ le string :
 `nomDeFonction(): string[] {...}`
 *La fonction est obligé de renvoyer une table*
   
+Installer une dépendance/package
+`pnpm install prisma --save-dev`  
